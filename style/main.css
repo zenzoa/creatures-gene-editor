@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Fondamento');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    height: 0;
+
+    background: #fafafa;
+    color: #888;
+
+    font-family: Fondamento, Georgia, serif;
+    font-size: 18px;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto;
+    padding: 50px;
+}
+
+header {
+    margin: 0 0 80px;
+}
+
+footer {
+    margin: 80px 0 0;
+}
+
+h1, h2 {
+    margin: 0;
+    font-weight: inherit;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: inherit;
+}
+
+h2 {
+    font-size: 1.2rem;
+    line-height: inherit;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: #ff2300;
+}
+
+.genome-editor {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 50px 0;
+}
+
+.genome-uploader > span {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.genome-uploader input {
+    display: none;
+}
+.genome-uploader label,
+.genome-uploader a,
+.genome-uploader a:active,
+.genome-uploader a:visited {
+    cursor: pointer;
+    color: #e62000;
+}
+.genome-uploader label:hover,
+.genome-uploader a:hover {
+    color: #ff2300;
+}
+
+.gene-list {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: #444;
+}
+
+.gene-type > h3 {
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.gene-type > h3:before {
+    content: '';
+    border: solid #888;
+    border-width: 0 3px 3px 0;
+    display: block;
+    padding: 3px;
+    position: absolute;
+    top: 10px;
+    left: -20px;
+}
+
+.gene-type.open > h3:before {
+    transform: rotate(45deg);
+}
+
+.gene-type.closed > h3:before {
+    transform: rotate(-45deg);
+}
+
+.gene {
+    padding: 16px 20px;
+    border-radius: 4px;
+    background: #eee;
+}
+
+.gene + .gene {
+    margin-top: 10px;
+}
+
+.gene-part {
+    display: flex;
+    flex-direction: row;
+}
+
+.gene-part + .gene-part {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.gene-part-name {
+    width: 10em;
+}
